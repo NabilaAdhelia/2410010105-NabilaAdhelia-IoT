@@ -60,3 +60,21 @@ ESP32 (simulator Python) -> MQTT (Mosquitto) -> Node-RED (REST API) -> Dashboard
 Dashboard menampilkan grafik suhu dan kelembaban (20 data terakhir) yang diperbarui otomatis menggunakan Chart.js, diambil lewat endpoint `/api/history`.
 
 ![Grafik Chart.js](7-chartjs.png)
+
+
+### Autentikasi API key
+Semua endpoint (`/api/suhu`, `/api/history`, `/api/kontrol`) memeriksa header `X-API-Key`. Permintaan tanpa key yang benar ditolak dengan status **401 Unauthorized**.
+
+Pengujian dengan curl:
+```
+curl -i http://localhost:1880/api/suhu
+curl -i http://localhost:1880/api/suhu -H "X-API-Key: iot-kampus-2410010105"
+```
+- Tanpa key: `401` dan `{"status":"error","message":"API key tidak valid"}`
+- Dengan key: `200` dan data sensor
+
+`dashboard.html` mengirim header ini otomatis pada setiap permintaan.
+
+![API key](8-api-key.png)
+
+> Catatan: key ditulis langsung di kode hanya untuk keperluan belajar. Pada sistem sungguhan, key disimpan di pengaturan server dan tidak ditaruh di file dashboard.
