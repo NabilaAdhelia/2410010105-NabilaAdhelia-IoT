@@ -53,3 +53,10 @@ ESP32 (simulator Python) -> MQTT (Mosquitto) -> Node-RED (REST API) -> Dashboard
 
 ### 6. Bukti pesan MQTT pada topik iot/kontrol
 ![MQTT kontrol](6-mqtt-kontrol.png)
+
+## Pengembangan (Nilai Tambah)
+
+### Grafik real-time dengan Chart.js
+Dashboard menampilkan grafik suhu dan kelembaban (20 data terakhir) yang diperbarui otomatis menggunakan Chart.js, diambil lewat endpoint `/api/history`.
+
+![Grafik Chart.js](7-chartjs.png)
