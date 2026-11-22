@@ -78,3 +78,12 @@ curl -i http://localhost:1880/api/suhu -H "X-API-Key: iot-kampus-2410010105"
 ![API key](8-api-key.png)
 
 > Catatan: key ditulis langsung di kode hanya untuk keperluan belajar. Pada sistem sungguhan, key disimpan di pengaturan server dan tidak ditaruh di file dashboard.
+
+### Endpoint threshold (PUT /api/threshold)
+Mengatur batas suhu. Jika suhu melewati batas, Node-RED mengirim notifikasi ke topik MQTT `iot/alert` dan dashboard menampilkan peringatan. Batas awal 35 °C.
+
+```
+curl -i -X PUT http://localhost:1880/api/threshold -H "X-API-Key: iot-kampus-2410010105" -H "Content-Type: application/json" -d "{\"max\":28}"
+```
+![Threshold curl](9-threshold-curl.png)
+![Peringatan di dashboard](10-threshold-alert.png)
