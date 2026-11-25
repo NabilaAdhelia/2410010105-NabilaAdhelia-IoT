@@ -1,0 +1,1173 @@
+[
+    {
+        "id": "f270fa3997915fb2",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "419524edca16e188",
+        "type": "tab",
+        "label": "REST API IoT",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "tab_p10",
+        "type": "tab",
+        "label": "Pertemuan 10 (Import)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "tab_tugas",
+        "type": "tab",
+        "label": "Tugas 2410010105",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8505e27b061b4fe8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e03fa192b076bb4d",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "cb9d7f8ca30b9dc0",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "mqtt_broker_config",
+        "type": "mqtt-broker",
+        "name": "Local Mosquitto",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "node-red-backend",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "5b74270e75aa24d4",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "e03fa192b076bb4d",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "cb9d7f8ca30b9dc0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bd49d1551e750d82",
+        "type": "ui-group",
+        "name": "Monitoring",
+        "page": "5b74270e75aa24d4",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "keepLoaded": false,
+        "tab": ""
+    },
+    {
+        "id": "mqtt_broker_p10",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Lokal",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ui_theme_p10",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "ui_page_p10",
+        "type": "ui-page",
+        "name": "IoT Dashboard",
+        "ui": "e03fa192b076bb4d",
+        "path": "/page10",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ui_theme_p10",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ui_group_mon",
+        "type": "ui-group",
+        "name": "Monitoring",
+        "page": "ui_page_p10",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ui_group_ctl",
+        "type": "ui-group",
+        "name": "Kontrol",
+        "page": "ui_page_p10",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ui_page_tugas",
+        "type": "ui-page",
+        "name": "Tugas Relay PWM",
+        "ui": "e03fa192b076bb4d",
+        "path": "/tugas",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ui_theme_p10",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ui_group_tugas_mon",
+        "type": "ui-group",
+        "name": "Monitoring",
+        "page": "ui_page_tugas",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ui_group_tugas_ctl",
+        "type": "ui-group",
+        "name": "Kontrol",
+        "page": "ui_page_tugas",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "eb61a5bdbd5f6be2",
+        "type": "inject",
+        "z": "f270fa3997915fb2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "4771aaf996184b4f"
+            ]
+        ]
+    },
+    {
+        "id": "04aa2226f24740ec",
+        "type": "mqtt in",
+        "z": "f270fa3997915fb2",
+        "name": "",
+        "topic": "test/node-red",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8505e27b061b4fe8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "e536a609be9cfeeb"
+            ]
+        ]
+    },
+    {
+        "id": "e536a609be9cfeeb",
+        "type": "debug",
+        "z": "f270fa3997915fb2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4771aaf996184b4f",
+        "type": "mqtt out",
+        "z": "f270fa3997915fb2",
+        "name": "",
+        "topic": "test/node-red",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8505e27b061b4fe8",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b790af3bc3110f96",
+        "type": "mqtt in",
+        "z": "f270fa3997915fb2",
+        "name": "Kelembapan",
+        "topic": "esp32/dht/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8505e27b061b4fe8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "3274ce0bbcbef87e"
+            ]
+        ]
+    },
+    {
+        "id": "4074164b3e5d96d0",
+        "type": "mqtt in",
+        "z": "f270fa3997915fb2",
+        "name": "Suhu",
+        "topic": "esp32/dht/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8505e27b061b4fe8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "3274ce0bbcbef87e"
+            ]
+        ]
+    },
+    {
+        "id": "3274ce0bbcbef87e",
+        "type": "debug",
+        "z": "f270fa3997915fb2",
+        "name": "Cek Data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8df828de12da0a34",
+        "type": "mqtt in",
+        "z": "419524edca16e188",
+        "name": "Subscribe Sensor",
+        "topic": "iot/sensor",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker_config",
+        "inputs": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "56d4ed5eb0aef17c"
+            ]
+        ]
+    },
+    {
+        "id": "56d4ed5eb0aef17c",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "Simpan Data Sensor",
+        "func": "var data = msg.payload;\ndata.received = new Date().toISOString();\nflow.set('lastSensor', data);\n\nvar history = flow.get('history') || [];\nhistory.push(data);\nif (history.length > 50) history.shift();\nflow.set('history', history);\n\nvar th = flow.get('threshold');\nif (th === undefined || th === null) th = 35;\nvar alertMsg = null;\nif (data.suhu > th) {\n    alertMsg = {topic: 'iot/alert', payload: {pesan: 'Suhu melewati batas', suhu: data.suhu, batas: th, waktu: data.received}};\n}\nreturn [msg, alertMsg];",
+        "outputs": 2,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "db3c94b1615289d1"
+            ],
+            [
+                "05f0caeba5dbedfe"
+            ]
+        ]
+    },
+    {
+        "id": "db3c94b1615289d1",
+        "type": "debug",
+        "z": "419524edca16e188",
+        "name": "Log Sensor",
+        "active": true,
+        "complete": "payload",
+        "x": 620,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "80865fb769631617",
+        "type": "http in",
+        "z": "419524edca16e188",
+        "name": "GET /api/suhu",
+        "url": "/api/suhu",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "8066035121faa792"
+            ]
+        ]
+    },
+    {
+        "id": "8066035121faa792",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "Build Response Suhu",
+        "func": "var key = msg.req.headers['x-api-key'];\nif (key !== 'iot-kampus-2410010105') {\n    msg.statusCode = 401;\n    msg.payload = {status: 'error', message: 'API key tidak valid'};\n    msg.headers = {'Access-Control-Allow-Origin': '*'};\n    return msg;\n}\n\nvar data = flow.get('lastSensor') || {suhu: null, kelembaban: null, timestamp: null};\nvar th = flow.get('threshold');\nif (th === undefined || th === null) th = 35;\nmsg.payload = {\n    status: 'success',\n    data: data,\n    threshold: th,\n    alert: (data.suhu !== null && data.suhu > th),\n    server_time: new Date().toISOString()\n};\nmsg.headers = {'Access-Control-Allow-Origin': '*'};\nreturn msg;",
+        "outputs": 1,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "52b69fa96754199b"
+            ]
+        ]
+    },
+    {
+        "id": "52b69fa96754199b",
+        "type": "http response",
+        "z": "419524edca16e188",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 640,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d172e6af96d21e3c",
+        "type": "http in",
+        "z": "419524edca16e188",
+        "name": "GET /api/history",
+        "url": "/api/history",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "533f0b1f37b077c8"
+            ]
+        ]
+    },
+    {
+        "id": "533f0b1f37b077c8",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "Build Response History",
+        "func": "var key = msg.req.headers['x-api-key'];\nif (key !== 'iot-kampus-2410010105') {\n    msg.statusCode = 401;\n    msg.payload = {status: 'error', message: 'API key tidak valid'};\n    msg.headers = {'Access-Control-Allow-Origin': '*'};\n    return msg;\n}\n\nvar history = flow.get('history') || [];\nmsg.payload = {\n    status: 'success',\n    count: history.length,\n    data: history\n};\nmsg.headers = {'Access-Control-Allow-Origin': '*'};\nreturn msg;",
+        "outputs": 1,
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "e914c0efde0e4f93"
+            ]
+        ]
+    },
+    {
+        "id": "e914c0efde0e4f93",
+        "type": "http response",
+        "z": "419524edca16e188",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 640,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f6197913d1f0fe60",
+        "type": "http in",
+        "z": "419524edca16e188",
+        "name": "POST /api/kontrol",
+        "url": "/api/kontrol",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "2c5908d40885e62d"
+            ]
+        ]
+    },
+    {
+        "id": "2c5908d40885e62d",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "Validasi & Publish",
+        "func": "var key = msg.req.headers['x-api-key'];\nif (key !== 'iot-kampus-2410010105') {\n    msg.statusCode = 401;\n    msg.payload = {status: 'error', message: 'API key tidak valid'};\n    msg.headers = {'Access-Control-Allow-Origin': '*'};\n    return [msg, null];\n}\n\nvar body = msg.payload;\nif (!body.device || !body.action) {\n    msg.statusCode = 400;\n    msg.payload = {status: 'error', message: 'device dan action wajib diisi'};\n    msg.headers = {'Access-Control-Allow-Origin': '*'};\n    return [msg, null];\n}\n\nvar mqttMsg = {payload: body, topic: 'iot/kontrol'};\n\nmsg.statusCode = 200;\nmsg.payload = {\n    status: 'success',\n    message: 'Perintah terkirim',\n    sent: body\n};\nmsg.headers = {'Access-Control-Allow-Origin': '*'};\nreturn [msg, mqttMsg];",
+        "outputs": 2,
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "0eb702f648e0cf42"
+            ],
+            [
+                "f75a665ff3f52917"
+            ]
+        ]
+    },
+    {
+        "id": "0eb702f648e0cf42",
+        "type": "http response",
+        "z": "419524edca16e188",
+        "name": "",
+        "x": 620,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f75a665ff3f52917",
+        "type": "mqtt out",
+        "z": "419524edca16e188",
+        "name": "Publish Kontrol",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "broker": "mqtt_broker_config",
+        "x": 630,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "74cfe0f9ac1bdd6b",
+        "type": "http in",
+        "z": "419524edca16e188",
+        "name": "OPTIONS CORS",
+        "url": "/api/*",
+        "method": "options",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "e6cd5b727cfca1be"
+            ]
+        ]
+    },
+    {
+        "id": "e6cd5b727cfca1be",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "CORS Headers",
+        "func": "msg.statusCode = 204;\nmsg.payload = '';\nmsg.headers = {\n    'Access-Control-Allow-Origin': '*',\n    'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',\n    'Access-Control-Allow-Headers': 'Content-Type, X-API-Key'\n};\nreturn msg;",
+        "outputs": 1,
+        "x": 380,
+        "y": 440,
+        "wires": [
+            [
+                "09b3d9d0c8d7c0e5"
+            ]
+        ]
+    },
+    {
+        "id": "09b3d9d0c8d7c0e5",
+        "type": "http response",
+        "z": "419524edca16e188",
+        "name": "",
+        "x": 570,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b0466be120a7419c",
+        "type": "http in",
+        "z": "419524edca16e188",
+        "name": "PUT /api/threshold",
+        "url": "/api/threshold",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "6cfe24e74858cde4"
+            ]
+        ]
+    },
+    {
+        "id": "6cfe24e74858cde4",
+        "type": "function",
+        "z": "419524edca16e188",
+        "name": "Set Batas Suhu",
+        "func": "var key = msg.req.headers['x-api-key'];\nif (key !== 'iot-kampus-2410010105') {\n    msg.statusCode = 401;\n    msg.payload = {status: 'error', message: 'API key tidak valid'};\n    return msg;\n}\n\nvar b = msg.payload;\nif (!b || b.max === undefined || isNaN(Number(b.max))) {\n    msg.statusCode = 400;\n    msg.payload = {status: 'error', message: 'field max (angka) wajib diisi'};\n    return msg;\n}\nflow.set('threshold', Number(b.max));\nmsg.statusCode = 200;\nmsg.payload = {status: 'success', message: 'Batas suhu diperbarui', threshold: Number(b.max)};\nreturn msg;",
+        "outputs": 1,
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "587396db8f21f642"
+            ]
+        ]
+    },
+    {
+        "id": "587396db8f21f642",
+        "type": "http response",
+        "z": "419524edca16e188",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 640,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "05f0caeba5dbedfe",
+        "type": "mqtt out",
+        "z": "419524edca16e188",
+        "name": "Publish Alert (iot/alert)",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "broker": "mqtt_broker_config",
+        "x": 640,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in_suhu",
+        "type": "mqtt in",
+        "z": "tab_p10",
+        "name": "Suhu dari Python",
+        "topic": "iot/kelas/sensor/suhu",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker_p10",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "fn_parse_suhu"
+            ]
+        ]
+    },
+    {
+        "id": "fn_parse_suhu",
+        "type": "function",
+        "z": "tab_p10",
+        "name": "Parse Float",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "ui_gauge_suhu"
+            ]
+        ]
+    },
+    {
+        "id": "ui_gauge_suhu",
+        "type": "ui-gauge",
+        "z": "tab_p10",
+        "name": "Suhu",
+        "group": "ui_group_mon",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Suhu (°C)",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "30",
+                "color": "#ffc800"
+            },
+            {
+                "from": "40",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": 50,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ui_switch_led",
+        "type": "ui-switch",
+        "z": "tab_p10",
+        "name": "Kontrol LED",
+        "label": "LED",
+        "group": "ui_group_ctl",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "mqtt_out_led"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out_led",
+        "type": "mqtt out",
+        "z": "tab_p10",
+        "name": "Perintah LED",
+        "topic": "iot/kelas/aktuator/led",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_p10",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in_status",
+        "type": "mqtt in",
+        "z": "tab_p10",
+        "name": "Status LED (feedback)",
+        "topic": "iot/kelas/status/led",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker_p10",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "ui_text_status"
+            ]
+        ]
+    },
+    {
+        "id": "ui_text_status",
+        "type": "ui-text",
+        "z": "tab_p10",
+        "group": "ui_group_ctl",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "name": "Status LED",
+        "label": "Status LED",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 420,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "t_mqtt_in_suhu",
+        "type": "mqtt in",
+        "z": "tab_tugas",
+        "name": "Suhu NIM",
+        "topic": "iot/2410010105/sensor/suhu",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker_p10",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "t_fn_parse"
+            ]
+        ]
+    },
+    {
+        "id": "t_fn_parse",
+        "type": "function",
+        "z": "tab_tugas",
+        "name": "Parse Float",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "t_gauge"
+            ]
+        ]
+    },
+    {
+        "id": "t_gauge",
+        "type": "ui-gauge",
+        "z": "tab_tugas",
+        "name": "Suhu",
+        "group": "ui_group_mon",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "6",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Suhu (°C)",
+        "alwaysShowTitle": false,
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 50,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 520,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "t_switch",
+        "type": "ui-switch",
+        "z": "tab_tugas",
+        "name": "Relay",
+        "label": "Relay (GPIO 26)",
+        "group": "ui_group_ctl",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": false,
+        "topic": "relay",
+        "topicType": "str",
+        "style": "",
+        "className": "",
+        "layout": "",
+        "clickableArea": "switch",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "t_mqtt_out_relay",
+                "t_debug"
+            ]
+        ]
+    },
+    {
+        "id": "t_mqtt_out_relay",
+        "type": "mqtt out",
+        "z": "tab_tugas",
+        "name": "Relay out",
+        "topic": "iot/2410010105/aktuator/relay",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_p10",
+        "x": 340,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "t_slider",
+        "type": "ui-slider",
+        "z": "tab_tugas",
+        "group": "ui_group_ctl",
+        "name": "PWM",
+        "label": "PWM LED (GPIO 2)",
+        "tooltip": "",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "pwm",
+        "topicType": "str",
+        "thumbLabel": "always",
+        "showTicks": "false",
+        "min": 0,
+        "max": 255,
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "t_mqtt_out_pwm",
+                "t_debug"
+            ]
+        ]
+    },
+    {
+        "id": "t_mqtt_out_pwm",
+        "type": "mqtt out",
+        "z": "tab_tugas",
+        "name": "PWM out",
+        "topic": "iot/2410010105/aktuator/pwm",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_p10",
+        "x": 340,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "t_debug",
+        "type": "debug",
+        "z": "tab_tugas",
+        "name": "Cek kirim",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 340,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "06933283e9934aaf",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.36.0"
+        }
+    }
+]
